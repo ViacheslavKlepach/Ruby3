@@ -1,0 +1,312 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Login to the system",
+    "line": 1,
+    "description": "As a user\nI want to login into the system when I provide username and password\nSo that I can use functionality available to logged in users",
+    "id": "login-to-the-system",
+    "uri": "features/support/login.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Access the \"Login\" page",
+        "line": 6,
+        "description": "",
+        "id": "login-to-the-system;access-the-\"login\"-page",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "The page \"http://demo.redmine.org/\" is opened",
+            "line": 7,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 10,
+                  "val": "http://demo.redmine.org/"
+                }
+              ],
+              "location": "features/step_definitions/reg_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1364063000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click \"login\" link",
+            "line": 8,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 9,
+                  "val": "login"
+                }
+              ],
+              "location": "features/step_definitions/reg_steps.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 704531000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The \"http://demo.redmine.org/login\" page should be displayed",
+            "line": 9,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 5,
+                  "val": "http://demo.redmine.org/login"
+                }
+              ],
+              "location": "features/step_definitions/reg_steps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123749000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario Outline",
+        "name": "Log in (Log out) to the system",
+        "line": 11,
+        "description": "",
+        "id": "login-to-the-system;log-in-(log-out)-to-the-system",
+        "type": "scenario_outline",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "The page \"http://demo.redmine.org/login\" is opened",
+            "line": 12,
+            "match": {
+              "location": "features/support/login.feature:12"
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I input valid \"<Username>\" to the \"username\" text-box",
+            "line": 13,
+            "match": {
+              "location": "features/support/login.feature:13"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input valid \"<Password>\" to the \"password\" text-box",
+            "line": 14,
+            "match": {
+              "location": "features/support/login.feature:14"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click \"login\" button",
+            "line": 15,
+            "match": {
+              "location": "features/support/login.feature:15"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The \"http://demo.redmine.org/my/page\" page should be displayed",
+            "line": 16,
+            "match": {
+              "location": "features/support/login.feature:16"
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click \"logout\" link",
+            "line": 17,
+            "match": {
+              "location": "features/support/login.feature:17"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The \"login\" link should be available",
+            "line": 18,
+            "match": {
+              "location": "features/support/login.feature:18"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "The \"http://demo.redmine.org/\" page should be displayed",
+            "line": 19,
+            "match": {
+              "location": "features/support/login.feature:19"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "keyword": "Scenarios",
+            "name": "",
+            "line": 20,
+            "description": "Examples:",
+            "id": "login-to-the-system;log-in-(log-out)-to-the-system;",
+            "rows": [
+              {
+                "cells": [
+                  "Username",
+                  "Password"
+                ],
+                "line": 22,
+                "id": "login-to-the-system;log-in-(log-out)-to-the-system;;1"
+              },
+              {
+                "cells": [
+                  "2062",
+                  "2062"
+                ],
+                "line": 23,
+                "id": "login-to-the-system;log-in-(log-out)-to-the-system;;2"
+              },
+              {
+                "cells": [
+                  "2063",
+                  "2063"
+                ],
+                "line": 24,
+                "id": "login-to-the-system;log-in-(log-out)-to-the-system;;3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Registration",
+    "line": 1,
+    "description": "As an unregistered user\nI want to create a user\nSo that I can use functionality available to registered users",
+    "id": "registration",
+    "uri": "features/support/reg.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Access the \"Register\" page",
+        "line": 6,
+        "description": "",
+        "id": "registration;access-the-\"register\"-page",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "The page \"http://demo.redmine.org/\" is opened",
+            "line": 7,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 10,
+                  "val": "http://demo.redmine.org/"
+                }
+              ],
+              "location": "features/step_definitions/reg_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1284114000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click \"register\" link",
+            "line": 8,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 9,
+                  "val": "register"
+                }
+              ],
+              "location": "features/step_definitions/reg_steps.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 350213000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The \"http://demo.redmine.org/account/register\" page should be displayed",
+            "line": 9,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 5,
+                  "val": "http://demo.redmine.org/account/register"
+                }
+              ],
+              "location": "features/step_definitions/reg_steps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 433596000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Submit a request with required data to create a new user",
+        "line": 11,
+        "description": "",
+        "id": "registration;submit-a-request-with-required-data-to-create-a-new-user",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "The page \"http://demo.redmine.org/account/register\" is opened",
+            "line": 12,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 10,
+                  "val": "http://demo.redmine.org/account/register"
+                }
+              ],
+              "location": "features/step_definitions/reg_steps.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1065654000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I submit a request with required data to create a new user",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/reg_steps.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1801104000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "a new user should be created",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/reg_steps.rb:27"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Unable to locate element: {\"method\":\"xpath\",\"selector\":\".//*[@id='loggedas']/a\"} (Selenium::WebDriver::Error::NoSuchElementError)\n[remote server] file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/webdriver-profile20150424-976-1bcx3vt/extensions/fxdriver@googlecode.com/components/driver-component.js:10271:in `FirefoxDriver.prototype.findElementInternal_'\n[remote server] file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/webdriver-profile20150424-976-1bcx3vt/extensions/fxdriver@googlecode.com/components/driver-component.js:603:in `fxdriver.Timer.prototype.setTimeout/<.notify'\n./features/step_definitions/reg_steps.rb:28:in `/^a new user should be created$/'\nfeatures/support/reg.feature:14:in `Then a new user should be created'",
+              "duration": 10188254000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
